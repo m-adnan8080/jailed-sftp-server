@@ -1,0 +1,21 @@
+Port 22
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+UsePAM yes
+
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+ClientAliveInterval 120
+Subsystem sftp	internal-sftp
+
+Match Group sftp_users
+    ChrootDirectory %h
+    X11Forwarding no
+    AllowTcpForwarding no
+    PermitTunnel no
+    AllowAgentForwarding no
+    ForceCommand internal-sftp
+    PermitTunnel no
