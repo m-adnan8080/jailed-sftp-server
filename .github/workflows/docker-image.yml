@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build & Push Image
+      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "adnan80" --password-stdin
+        docker image build -t adnan80/jailed-sftp-server:latest .
+        docker push adnan80/jailed-sftp-server:latest
