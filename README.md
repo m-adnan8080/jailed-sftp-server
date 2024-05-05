@@ -19,10 +19,16 @@ SFTP Server on Ubuntu 20.04 using openssh-server with user jail to it home direc
    
    Note: The del_user.sh will delete the user home_dir recursively. 
 
-5. [Optional] Stop the lamp docker container instance:
+5. Test the SFTP user to login
+
+      `sftp -p 2222 user1@localhost`
+      `sftp> pwd`
+      `sftp> /` 
+
+5. [Optional] Stop the SFTP docker container instance:
 
       `docker stop sftp-server`
 
-6. [Optional] Delete the lamp docker container instance (after stopping it)
+6. [Optional] Delete the SFTP docker container instance (after stopping it)
 
       `docker rm sftp-server`
