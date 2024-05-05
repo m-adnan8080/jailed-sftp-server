@@ -1,5 +1,5 @@
 # SFTP Server in docker container
-LAMP Server on Ubuntu 16.04 with nano, git, PHP-7.0, Apache2, MySQL-5.7 and phpMyAdmin
+SFTP Server on Ubuntu 20.04 using openssh-server with user jail to it home directory on SFTP and no ssh login allowed for SFTP users.
 
 # Usage
 
