@@ -22,7 +22,9 @@ SFTP Server on Ubuntu 20.04 using openssh-server with user jail to it home direc
 5. Test the SFTP user to login
 
       `sftp -p 2222 user1@localhost`
+   
       `sftp> pwd`
+
       `sftp> /` 
 
 5. [Optional] Stop the SFTP docker container instance:
