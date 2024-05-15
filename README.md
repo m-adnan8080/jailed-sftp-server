@@ -7,7 +7,7 @@ SFTP Server on Ubuntu 20.04 using openssh-server with user jail to it home direc
 
 2. Download and start the SFTP server instance:
    
-      `docker run -d -p 2222:22 --name sftp-server adnan80/docker-sftp-server`
+      `docker run -d -p 2222:22 --name sftp-server adnan80/jailed-sftp-server:v1.0`
 
 3. Adding new SFTP user on SFTP server
 
