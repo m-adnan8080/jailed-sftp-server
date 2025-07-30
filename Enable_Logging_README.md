@@ -79,5 +79,5 @@ getent group "$SFTP_GROUP" | awk -F: '{print $4}' | tr ',' '\n' | while read -r 
     fi
 done
 ```
-
 ---
+**NOTE:** The change is not persitent means on server restart the sftp logging will be gone. To make it persistent add the script to system startup or schedule using crontab to cater new user creation and enable logging as well.
